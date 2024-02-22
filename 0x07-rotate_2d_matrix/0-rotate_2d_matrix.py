@@ -4,9 +4,9 @@
 
 def rotate_2d_matrix(matrix):
     """rotates a 2D matrix 90 degrees clockwise"""
-    if type(matrix) != list or len(matrix) <= 0:
+    if not isinstance(matrix, list) or len(matrix) <= 0:
         return
-    if not all(map(lambda x: type(x) == list, matrix)):
+    if not all(isinstance(x, list) for x in matrix):
         return
     rows = len(matrix)
     cols = len(matrix[0])
